@@ -1,0 +1,48 @@
+{
+  "repo": "private-metasearch-engine",
+  "title": "Private search",
+  "subtitle": "Find useful sources without the noise. Choose offline or live results.",
+  "tools": [
+    {
+      "id": "search",
+      "kind": "search",
+      "title": "Private search",
+      "description": "Search the educational catalog, or add live Wikipedia results.",
+      "actions": [
+        {
+          "id": "search",
+          "label": "Search",
+          "fields": [
+            {
+              "key": "query",
+              "label": "Search query",
+              "type": "text",
+              "value": "B+ tree"
+            },
+            {
+              "key": "mode",
+              "label": "Search engines",
+              "type": "select",
+              "value": "offline",
+              "options": [
+                {
+                  "value": "offline",
+                  "label": "Offline catalog"
+                },
+                {
+                  "value": "live",
+                  "label": "Catalog + live Wikipedia"
+                }
+              ]
+            }
+          ],
+          "note": "Offline results are a fixed educational corpus, not live web search. Live mode needs internet access."
+        }
+      ],
+      "base": "."
+    }
+  ],
+  "previews": [],
+  "runtime": "Local-only backend \u00b7 Python standard library \u00b7 UI data stored separately in .web-data",
+  "port": 8104
+}
